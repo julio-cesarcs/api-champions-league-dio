@@ -1,0 +1,12 @@
+12	Get player by id
+11	Cadastrando um Jogador
+10	Ajustando o Cadastro
+9	Implementando delete route e controller
+8	Implementando delete service e repository
+7	Implementando update route e controller
+6	Update implementando service e repository
+5	Como encontrar erros mais fáceis
+4	Criando recurso de clubs
+3	Lendo arquivo json
+2	Implementando cors
+1	Entendendo o Desafio
