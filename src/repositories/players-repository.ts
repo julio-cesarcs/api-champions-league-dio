@@ -322,6 +322,22 @@ const database: PlayerModel[] = [
       Physical: 85,
     },
   },
+  {
+    "id": 21,
+    "name": "Gerson",
+    "club": "Flamengo",
+    "nationality": "Brazil",
+    "position": "Midfielder",
+    "statistics": {
+      "Overall": 86,
+      "Pace": 80,
+      "Shooting": 66,
+      "Passing": 74,
+      "Dribbling": 81,
+      "Defending": 87,
+      "Physical": 84
+    }
+}
 ];
 
 
