@@ -323,23 +323,22 @@ const database: PlayerModel[] = [
     },
   },
   {
-    "id": 21,
-    "name": "Gerson",
-    "club": "Flamengo",
-    "nationality": "Brazil",
-    "position": "Midfielder",
-    "statistics": {
-      "Overall": 86,
-      "Pace": 80,
-      "Shooting": 66,
-      "Passing": 74,
-      "Dribbling": 81,
-      "Defending": 87,
-      "Physical": 84
-    }
-}
+    id: 21,
+    name: "Gerson",
+    club: "Flamengo",
+    nationality: "Brazil",
+    position: "Midfielder",
+    statistics: {
+      Overall: 86,
+      Pace: 80,
+      Shooting: 66,
+      Passing: 74,
+      Dribbling: 81,
+      Defending: 87,
+      Physical: 84,
+    },
+  },
 ];
-
 
 export const findAllPlayers = async (): Promise<PlayerModel[]> => {
   return database;
@@ -355,23 +354,26 @@ export const insertPlayer = async (player: PlayerModel) => {
   database.push(player);
 };
 
-export const deleteOnePlayer = async (id: number)=>{
-  const index = database.findIndex(p => p.id === id);
+export const deleteOnePlayer = async (id: number) => {
+  const index = database.findIndex((p) => p.id === id);
 
-  if(index !== -1){
-    database.splice(index, 1)
-    return true
+  if (index !== -1) {
+    database.splice(index, 1);
+    return true;
   }
 
-  return false
-}
+  return false;
+};
 
-export const findAndModifyPlayer = async (id: number, statistics:StatisticModel)=>{
-  const playerIndex = database.findIndex(p => p.id === id);
+export const findAndModifyPlayer = async (
+  id: number,
+  statistics: StatisticModel
+) => {
+  const playerIndex = database.findIndex((p) => p.id === id);
 
-  if(playerIndex !== -1){
-    database[playerIndex].statistics = statistics
+  if (playerIndex !== -1) {
+    database[playerIndex].statistics = statistics;
   }
 
-  return database[playerIndex]
-}
+  return database[playerIndex];
+};
